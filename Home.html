@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My HomePage</title>
+    <style>
+body{
+    background: linear-gradient(to top right, rgb(181, 181, 248)
+    ,rgb(84, 84, 219),rgb(148, 148, 230));
+    width: 100vw;
+    background-repeat: no-repeat;
+    height: 100vh;margin: 0;overflow: hidden;
+    position: relative;
+}
+        .back{
+            
+            position: relative;
+            width: 100%;height: 100%;
+        }
+       
+      
+         .games{display: none;z-index: 10;
+            animation: dispaly 0.5s ease-in;
+           position: absolute;
+            width: 250px;height: 310px;left: 20%;
+            background: linear-gradient(to top left, rgb(137, 137, 241),
+             rgb(23, 23, 252));transition: 0.5s;
+             box-shadow: 3px 3px 20px blue;
+             transform-origin: top;
+             border-radius: 20px;
+        }
+        @keyframes dispaly {
+            0%{transform: scaleY(-0.1) translateY(-60px);}
+            100%{
+                transform: scaleY(1) translateY(0px);
+            }
+        }
+         .games li{ list-style-type:square;
+            cursor: pointer; width: fit-content;
+            margin:4px;  left: -15px;
+            padding: 5px;transition: 0.8s; font-size: 20px;
+            text-transform: uppercase;
+        }
+        
+        .games li:hover{color: rgb(255, 255, 255);
+            font-weight: 900;
+            box-shadow: 2px 2px 20px rgb(1, 1, 58), 
+            inset 2px 2px 10px rgb(1, 1, 58);
+            list-style-type:circle;
+        }
+        .games li:active{
+            color: red;
+        }
+
+        .apps{display: none;z-index: 10;
+            animation: dispaly 0.5s ease-in;
+           position: absolute;
+            width: 250px;height: 300px;left: 40%;
+            background: linear-gradient(to top left, rgb(137, 137, 241),
+             rgb(23, 23, 252));transition: 0.5s;
+             box-shadow: 3px 3px 20px blue;
+             transform-origin: top;
+             border-radius: 20px;
+        }
+        @keyframes dispaly {
+            0%{transform: scaleY(-0.1) translateY(-60px);}
+            100%{
+                transform: scaleY(1) translateY(0px);
+            }
+        }
+         .apps li{ list-style-type:square;
+            cursor: pointer; width: fit-content;
+            margin:6px;  left: -15px;
+            padding: 5px;transition: 0.8s; font-size: 20px;
+            text-transform: uppercase;
+        }
+        
+        .apps li:hover{color: rgb(255, 255, 255);
+            font-weight: 900;
+            box-shadow: 2px 2px 20px rgb(1, 1, 58), 
+            inset 2px 2px 10px rgb(1, 1, 58);
+            list-style-type:circle;
+        }
+        .apps li:active{
+            color: red;
+        }
+
+       
+
+header{ height: 100px; overflow: hidden;
+    position:relative;
+    color:white;
+    padding: 10px;
+    text-align: center;
+background:linear-gradient(to top left, rgb(26, 25, 25),
+rgb(160, 158, 158)) ;
+}
+header #ev{
+    position: relative;
+    left: 20%;
+}
+header div{
+    position: absolute;
+}
+header div span:nth-child(1){
+   color: red;font-size: 40px; text-shadow: 3px 3px 2px 
+   rgb(255, 255, 0);
+    font-weight:bold;letter-spacing: 2px;word-spacing: 20px;
+}header div span:nth-child(2){
+color: rgb(50, 196, 21);font-size: 40px; text-shadow: 3px 
+3px 2px yellow;
+ font-weight:bold;letter-spacing: 2px;word-spacing: 20px;
+}header div span:nth-child(3){
+color: rgb(104, 21, 199);font-size: 40px; text-shadow: 3px
+ 3px 2px yellow;
+ font-weight:bold;letter-spacing: 2px;word-spacing: 20px;
+}
+header::before{
+    position: absolute;
+    animation: rotate 12s linear  infinite;
+    content: 'Love It';right: 2%;    width: 100px;height: 
+    80px;border-radius: 50%;
+    background:radial-gradient(red,green,yellow,blue);
+    opacity: 0.8;
+   
+    text-align: center;line-height: 70px;
+}
+header .light{
+    position: absolute;top: -200px;filter: blur(20);
+    box-shadow: 12px 12px 60px white;    content: '';left: -2%;
+     transform: rotateZ(-20deg);
+       width: 8px;height: 800px;background:white;opacity: 0.8;
+    
+    text-align: center;line-height: 70px;
+}header .light.active{
+    animation: move 6s ease-in-out;
+}
+@keyframes move {
+    0%{
+transform: translateX(0px) rotateZ(-20deg);
+    }
+    50%{
+transform: translateX(2000px) rotateZ(-20deg);
+    }100%{
+transform: translateX(-2000px) rotateZ(-20deg);
+    }
+}
+@keyframes rotate {
+    0%{
+        transform: rotateY(0deg);
+    }25%{
+        transform: rotateY(360deg)scale(0.7) rotateX(20deg);
+    }50%{
+        transform: rotateY(0deg) rotateX(50deg);
+    }75%{
+        transform: rotateY(-360deg) scale(1.4) rotateX(20deg);
+    }100%{
+        transform: rotateY(0deg);
+    }
+}
+#ul{
+    position: relative;
+    top:40%;
+    background: red;
+    width: 100%;
+    list-style: none;display: flex;flex-direction: row;
+}
+
+.box{
+    opacity: 0;
+    position: absolute;
+    width: 50px;
+    height: 50px;z-index: -1;
+    bottom: 0;
+    background: transparent;
+    box-shadow: 2px 2px 20px blue,-2px -2px 20px blue,
+     inset 2px 2px 10px blue,inset -2px -2px 10px blue;
+     animation: animate 7s linear  infinite;
+}
+@keyframes animate {
+    0%{transform: translateY(0px) rotateZ(0deg)scale(0.2); opacity: 0.1; }
+    100%{transform: translateY(-1000px) rotateZ(720deg) scale(1.5); opacity:0.47}
+}
+#ul li{
+    position: absolute;
+    font-size: 20px;cursor: pointer;
+    font-weight: 1000;
+    color:rgb(22, 141, 253);
+    transition: 0.5s;
+    margin: 0px 10px 10px 10px;
+}
+
+#ul li:nth-child(1){
+    color:rgb(3, 20, 36);
+}#ul li:hover{
+    
+    text-decoration-color:rgb(255, 255, 255);
+    font-weight: bold;
+    box-shadow: 1px 1px 20px rgb(13, 138, 255);
+    text-decoration: underline;
+}
+#ul li:nth-child(5){
+    right: 10%;
+    color:rgb(9, 134, 252);
+}#ul li:nth-child(4){
+    right: 30%;
+    color:rgb(9, 134, 252);
+}#ul li:nth-child(3){
+    right: 50%;
+    color:rgb(9, 134, 252);
+}#ul li:nth-child(2){
+    right: 70%;
+    color:rgb(9, 134, 252);
+}#ul li:nth-child(1){
+    right: 90%;
+    color:rgb(9, 134, 252);
+}
+
+@keyframes coloe {
+    0%{transform: scale(1) translateX(0px);}
+    40%{transform: scale(1.2) translateX(-7px);}
+    80%{transform: scale(1.5) translateX(7px);}
+    100%{transform: scale(1) translateX(0px);}
+}
+
+#mem{display: none;
+    position: absolute;
+    left:30%;
+    width: 550px;
+    height: 600px;
+
+}
+#mem .mem{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 1%
+}
+#mem button{
+    font-weight: bolder;
+    z-index: 1;font-size: 40px;
+    position: absolute;
+    width: 50px;height: 50px;
+    right: 0px;border-radius: 10%;
+}
+#mem button:hover{
+    box-shadow: 2px 2px 10px black,
+    inset 2px 2px 10px black;
+}
+
+#tic{display: none;
+    position: absolute;
+    left:30%;
+    width: 550px;
+    height: 600px;
+
+}
+#tic .tic{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 1%
+}
+#tic button{
+    font-weight: bolder;
+    z-index: 1;font-size: 40px;
+    position: absolute;
+    width: 50px;height: 50px;
+    right: 0px;border-radius: 10%;
+}
+#tic button:hover{
+    box-shadow: 2px 2px 10px black,
+    inset 2px 2px 10px black;
+}
+
+#flappy{display: none;
+    position: absolute;
+    left:20%;
+    width: 750px;
+    height: 600px;
+
+}
+#flappy .flappy{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 1%
+}
+#flappy button{
+    font-weight: bolder;
+    z-index: 1;font-size: 40px;
+    position: absolute;
+    width: 50px;height: 50px;
+    right: 0px;border-radius: 10%;
+}
+#flappy button:hover{
+    box-shadow: 2px 2px 10px black,
+    inset 2px 2px 10px black;
+}
+
+#doodle{display: none;
+    position: absolute;
+    left:30%;
+    width: 450px;
+    height: 550px;
+
+}
+#doodle .doodle{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 1%
+}
+#doodle button{
+    font-weight: bolder;
+    z-index: 1;font-size: 30px;
+    position: absolute;
+    width: 40px;height: 40px;
+    right: 0px;border-radius: 10%;
+}
+#doodle button:hover{
+    box-shadow: 2px 2px 10px black,
+    inset 2px 2px 10px black;
+}
+
+#pingpong{display: none;
+    position: absolute;
+    left:25%;
+    width: 650px;
+    height: 500px;
+
+}
+#pingpong .pingpong{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 1%
+}
+#pingpong button{
+    font-weight: bolder;
+    z-index: 1;font-size: 30px;
+    position: absolute;
+    width: 40px;height: 40px;
+    right: 0px;border-radius: 10%;
+}
+#pingpong button:hover{
+    box-shadow: 2px 2px 10px black,
+    inset 2px 2px 10px black;
+}
+
+
+#snake{display: none;
+    position: absolute;
+    left:30%;
+    width: 550px;
+    height: 600px;
+
+}
+#snake .snake{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 1%
+}
+#snake button{
+    font-weight: bolder;
+    z-index: 1;font-size: 40px;
+    position: absolute;
+    width: 50px;height: 50px;
+    right: 0px;border-radius: 10%;
+}
+#snake button:hover{
+    box-shadow: 2px 2px 10px black,
+    inset 2px 2px 10px black;
+}
+
+#hangman{display: none;
+    position: absolute;
+    left:30%; 
+    transform: scaleX(1.2);
+    width: 385px;
+    height: 600px;
+
+}
+#hangman .hangman{outline: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 1%
+}
+#hangman button{
+    font-weight: bolder;
+    z-index: 1;font-size: 30px;
+    position: absolute;
+    width: 40px;height: 40px;
+    right: 0px;border-radius: 10%;
+}
+#hangman button:hover{
+    box-shadow: 2px 2px 10px black,
+    inset 2px 2px 10px black;
+}
+#whack{display: none;
+    position: absolute;
+    left:30%; 
+    width: 410px;
+    height: 500px;
+
+}
+#whack .whack{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 1%
+}
+#whack button{
+    font-weight: bolder;
+    z-index: 1;font-size: 30px;
+    position: absolute;
+    width: 40px;height: 40px;
+    right: 0px;border-radius: 10%;
+}
+#whack button:hover{
+    box-shadow: 2px 2px 10px black,
+    inset 2px 2px 10px black;
+}
+#age{display: none;
+    position: absolute;
+    left:30%; 
+    width: 500px;
+    height: 500px;
+
+}
+#age .age{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 1%;
+}
+#age button{
+    font-weight: bolder;
+    z-index: 1;font-size: 30px;
+    position: absolute;
+    width: 40px;height: 40px;
+    right: 0px;border-radius: 10%;
+}
+#age button:hover{
+    box-shadow: 2px 2px 10px black,
+    inset 2px 2px 10px black;
+}
+#calc{display: none;
+    position: absolute;
+    left:30%; 
+    width: 350px;
+    height: 500px;
+
+}
+#calc .calc{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: scale(1);
+    border-radius: 1%;
+}
+#calc button{
+    font-weight: bolder;
+    z-index: 1;font-size: 30px;
+    position: absolute;
+    width: 40px;height: 40px;
+    right: 0px;border-radius: 10%;
+}
+#calc button:hover{
+    box-shadow: 2px 2px 10px black,
+    inset 2px 2px 10px black;
+}
+#pass{display: none;
+    position: absolute;
+    left:30%; 
+    width: 400px;
+    height: 350px;
+
+}
+#pass .pass{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: scale(1);
+    border-radius: 1%;
+}
+#pass button{
+    font-weight: bolder;
+    z-index: 1;font-size: 30px;
+    position: absolute;
+    width: 40px;height: 40px;
+    right: 0px;border-radius: 10%;
+}
+#pass button:hover{
+    box-shadow: 2px 2px 10px black,
+    inset 2px 2px 10px black;
+}
+
+#alarm{display: none;
+    position: absolute;
+    left:30%; 
+    width: 500px;
+    height: 450px;
+
+}
+#alarm .alarm{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: scale(1);
+    border-radius: 1%;
+}
+#alarm button{
+    font-weight: bolder;
+    z-index: 1;font-size: 30px;
+    position: absolute;
+    width: 40px;height: 40px;
+    right: 0px;border-radius: 10%;
+}
+#alarm button:hover{
+    box-shadow: 2px 2px 10px black,
+    inset 2px 2px 10px black;
+}
+#doList{display: none;
+    position: absolute;
+    left:30%; 
+    width: 450px;
+    height: 520px;
+
+}
+#doList .doList{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+   /* transform: scale(1);*/
+    border-radius: 1%;
+}
+#doList button{
+    font-weight: bolder;
+    z-index: 1;font-size: 30px;
+    position: absolute;
+    width: 40px;height: 40px;
+    right: 0px;border-radius: 10%;
+}
+#doList button:hover{
+    box-shadow: 2px 2px 10px black,
+    inset 2px 2px 10px black;
+}
+#counter{display: none;
+    position: absolute;
+    left:30%; 
+    width: 440px;
+    height: 400px;
+
+}
+#counter .counter{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: scale(1);
+    border-radius: 1%;
+}
+#counter button{
+    font-weight: bolder;
+    z-index: 1;font-size: 30px;
+    position: absolute;
+    width: 40px;height: 40px;
+    right: 0px;border-radius: 10%;
+}
+#counter button:hover{
+    box-shadow: 2px 2px 10px black,
+    inset 2px 2px 10px black;
+}
+
+
+#home{font-size: 18px;
+    overflow-y:hidden;border-radius: 5px;
+    padding: 5px;
+    position: absolute;right: 5%;
+    top:20%;background: linear-gradient(rgb(58, 58, 167),rgb(34, 34, 68),rgb(75, 75, 184));
+    box-shadow: 10px 10px 20px rgb(0, 0, 75);
+    width: 50%; height: 60%;
+    opacity: 0.8; z-index: -2;
+    display: none;
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="light"></div>
+    <div class="div"><span>WEB</span><span>Page</span> <span>DevelopMent</span></div>
+<span id="ev">Everything Starts With A CLICK!!</span>
+<ul id="ul">
+    <li>Home</li><li id="gameBox">Games</li><li id="appBtn">Applications</li><li>About</li><li>Help</li>
+</header>
+</ul>
+    <div class="back">
+<ul class="games">
+    <li class="li" id="opensnake"  onclick="openGame('snake')">Snake Game</li>
+    <li class="li"  onclick="openGame('flappy')">Flappy Bird Game</li>
+    <li class="li"  onclick="openGame('doodle')">Doodle Jump Game</li>
+    <li class="li"  onclick="openGame('pingpong')">Ping Ping Game</li>
+    <li class="li"  onclick="openGame('whack')">whack A Mole Game</li>
+    <li class="li"  onclick="openGame('hangman')">HangMan Game</li>
+    <li class="li"  onclick="openGame('tic')">TicTacToe Game</li>
+    <li class="li"  onclick="openGame('mem')">Memory Game</li>
+</ul>
+<ul class="apps">
+<li onclick="openApp('age')">Age Calculator</li>
+<li onclick="openApp('counter')"> Counter</li>
+<li onclick="openApp('doList')">To Do List</li>
+<li onclick="openApp('pass')">Password Generator</li>
+<li onclick="openApp('calc')">Calculator</li>
+<li onclick="openApp('alarm')">Alarm</li>
+</ul>
+<section>
+    <div id="mem">
+        <button id="closeMem">X</button>
+        <iframe src="C:\Users\USER\Desktop\Games\Memory Game\mem.html" class="mem"></iframe>
+
+    </div>
+
+<div id="snake">
+    <button id="closeSnake">X</button>
+    
+<iframe src="C:\Users\USER\Desktop\Games\Snake Game\snake.html" class="snake"></iframe>
+</div>
+<div id="hangman">
+    <button id="closeMan">X</button>
+<iframe src="C:\Users\USER\Desktop\Games\HangMan Game\hangman.html" class="hangman"></iframe>
+</div>
+
+<div id="tic">
+    <button id="closeTic">X</button>
+<iframe src="C:\Users\USER\Desktop\Tic Game\tic.html" class="tic"></iframe>
+</div>
+<div id="flappy">
+    <button id="closeFlappy">X</button>
+<iframe src="C:\Users\USER\Desktop\Games\Flappy Game\flappy.html" class="flappy"></iframe>
+</div>
+<div id="doodle">
+    <button id="closeDoodle">X</button>
+<iframe src="C:\Users\USER\Desktop\Games\Doodle Game\doodleJump.html" class="doodle"></iframe>
+</div>
+<div id="pingpong">
+    <button id="closePingpong">X</button>
+<iframe src="C:\Users\USER\Desktop\Games\PingPong Game\Pingpong.html" class="pingpong"></iframe>
+</div>
+
+<div id="whack" >
+    <button id="closeWhack">X</button>
+<iframe src="C:\Users\USER\Desktop\Games\Whack a mole\Fk A Mole.html" class="whack" onmousedown="move()"></iframe>
+</div>
+</section>
+
+<section class="section">
+    <div id="age">
+        <button id="closeAge">X</button>
+        <iframe src="C:\Users\USER\Desktop\Games\Age Calc\age.html" class="age"></iframe>
+
+    </div>
+    <div id="calc">
+        <button id="closeCalc">X</button>
+        <iframe src="C:\Users\USER\Desktop\Games\Calc\calc.html" class="calc"></iframe>
+
+    </div>
+    <div id="pass">
+        <button id="closePass">X</button>
+        <iframe src="C:\Users\USER\Desktop\Games\Password Generator\pass.html" class="pass"></iframe>
+
+    </div>
+    <div id="doList">
+        <button id="closeTodo">X</button>
+        <iframe src="C:\Users\USER\Desktop\Games\To Do List\index.html" class="doList"></iframe>
+
+    </div>
+    <div id="alarm">
+        <button id="closeAlarm">X</button>
+        <iframe src="C:\Users\USER\Desktop\Games\Alarm\alarm.html" class="alarm"></iframe>
+
+    </div>
+
+    <div id="counter">
+        <button id="closeCounter">X</button>
+        <iframe src="C:\Users\USER\Desktop\Games\Counter\counter.html" class="counter"></iframe>
+
+    </div>
+</section>
+    </div>
+
+    <div id="home">
+        <h3>About the Author</h3>
+        <p>
+            I am Amos Mwangi juniour software developer.
+            I am well conversant with HTML, CSS and some JavaScript. The knowledge i obtained it in a self 
+            inductive way. I enjoy much creating user interfaces, mobile and computer games, interactive websites
+            and so on.
+            
+            This is my first website to devolop completely from scratch.
+            It has been in my fifth dimension the urge to be software developer and a website developer.
+
+
+
+        </p>
+        <p>
+            I am a teacher by profession but deep down i have the 
+            energy of a software engineer. In the current generation 
+            
+            it is obvious that most people in the world
+            use electronic gagets especially phones and other forms of computers. Any form of a computer 
+            requires instructions and this instructions are what we refer to as codes.
+
+            The world is growing in an exponential way, implying that even
+            technology needs updates and its growing also. 
+        </p>  
+        <p>
+            <h4>My Interest</h4>
+            My much concern is on game devopment. And creating interactive UIs.
+
+        </p>
+    </div>
+    <script src="home.js"></script>
+</body>
+</html>
